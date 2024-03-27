@@ -10,9 +10,6 @@
 <div align="center">
 </div>
 
----
-
-### 📂 File Name: `network_info_toolkit.py`
 
 ---
 
@@ -100,9 +97,16 @@ The Network Information Toolkit is a comprehensive Python toolS designed for net
   - Determines the approximate geographic location of an IP address, including details such as country, region, city, latitude, longitude, and more.
     nalyzes a website's SSL/TLS certificate, verifying issuance, validity, and encryption details, ensuring secure communication.
 
-...
+---
+
+### 📚 How It Works
+
+The Network Information Toolkit works by leveraging various Python libraries and APIs to collect and analyze network-related data. It consists of modular components, each responsible for a specific task, such as fetching DNS records, scanning ports, or analyzing SSL certificates.
+
+When you run the `NetInfo_Toolkit.py` script, it presents you with a menu of available functionalities. You can then choose the desired option to perform the corresponding network analysis task. Behind the scenes, the script executes the appropriate code to gather the necessary data and present it to you in a structured format.
 
 ---
+
 
 ### 🤝 Contributing
 
