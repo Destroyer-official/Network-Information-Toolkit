@@ -8,7 +8,6 @@
 </div>
 
 <div align="center">
-  <img src="https://example.com/logo.png" width="200" height="200">
 </div>
 
 ---
