@@ -18,7 +18,7 @@
 
 ### 🌟 Overview
 
-The Network Information Toolkit is a comprehensive Python tool designed for network analysis and troubleshooting. It offers a range of functionalities to gather information about IP addresses, DNS records, SSL certificates, BGP data, and more.
+The Network Information Toolkit is a comprehensive Python toolS designed for network analysis and troubleshooting. It offers a range of functionalities to gather information about IP addresses, DNS records, SSL certificates, BGP data, and more.
 
 ---
 
@@ -38,7 +38,7 @@ The Network Information Toolkit is a comprehensive Python tool designed for netw
 
 1. **Run the script:**
    ```bash
-   python network_info_toolkit.py
+   python NetInfo_Toolkit.py
    ```
    The script will prompt you to choose an option from the available functionalities.
 
