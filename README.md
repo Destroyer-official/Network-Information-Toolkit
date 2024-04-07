@@ -23,7 +23,7 @@ The Network Information Toolkit is a comprehensive Python toolS designed for net
 
 #### Prerequisites:
 
-- Python 3.x ([Download Python](https://www.python.org/))
+- Python  3.12 ([Download Python](https://www.python.org/))
 - Install dependencies:
   ```bash
   pip install -r requirements.txt
