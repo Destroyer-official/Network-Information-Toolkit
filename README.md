@@ -27,8 +27,7 @@ The Network Information Toolkit is a comprehensive Python toolS designed for net
   
 . **Clone the repository:**
     ```bash
-    git clone [https://github.com/Destroyer-official/Destroyer-DoS.git](https://github.com/Destroyer-official/Network-Information-Toolkit.git](https://github.com/Destroyer-official/Network-Information-Toolkit.git)
-    ```
+    git clone https://github.com/Destroyer-official/Network-Information-Toolkit.git
 -. **Navigate to the directory:**
     ```bash
     cd Network-Information-Toolkit
