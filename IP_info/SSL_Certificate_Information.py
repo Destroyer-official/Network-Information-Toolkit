@@ -12,12 +12,13 @@ def get_ssl_certificate_info(domain):
 
 def save_certificate_info_to_file(domain, cert_info, whois_info):
     filename = f"{domain}_SSL_Certificate_Information.txt"
-    with open(filename, 'w') as f:
+    with open(filename, 'a') as f:
         f.write(f"SSL Certificate Information for {domain}:\n\n")
         for key, value in cert_info.items():
             f.write(f"{key}: {value}\n")
         f.write("\nWhois Information:\n\n")
         f.write(whois_info)
+        print(f"Certificate information saved in {filename}.")
 
 def get_whois_info(domain):
     try:
@@ -31,7 +32,7 @@ def ssl_main():
     cert_info = get_ssl_certificate_info(domain)
     whois_info = get_whois_info(domain)
     save_certificate_info_to_file(domain, cert_info, whois_info)
-    print("Certificate information saved to file.")
+    
 
 if __name__ == "__main__":
     ssl_main()
