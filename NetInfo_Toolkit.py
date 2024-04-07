@@ -11,7 +11,7 @@ from IP_info.Crawler import crawler_fetcher
 from IP_info.Robot_info import parse_robots_txt
 from IP_info.IP_location import IPGeolocationAPI
 from IP_info.HEADER_info import save_header_info
-from DNS_Records.A_records import  ARecordFetcher
+from DNS_Records.A_records import  get_a_records
 from DNS_Records.NS_records import NSRecordFetcher
 from DNS_Records.MX_records import MXRecordFetcher
 from DNS_Records.SOA_records import SOARecordFetcher
@@ -172,9 +172,8 @@ def all_main():
         query = input("Enter your search query: ")
         BGP().Search(query)
     elif choice == '18':
-        A_fetcher = ARecordFetcher()
         domain = input("Enter the domain: ")
-        A_fetcher.get_a_records(domain)
+        get_a_records(domain)
 
     elif choice == '19':
         domain = input("Enter the domain: ")
