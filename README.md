@@ -20,10 +20,19 @@ The Network Information Toolkit is a comprehensive Python toolS designed for net
 ---
 
 ### 🚀 Installation
-
+ 
 #### Prerequisites:
 
 - Python  3.12 ([Download Python](https://www.python.org/))
+  
+. **Clone the repository:**
+    ```bash
+    git clone [https://github.com/Destroyer-official/Destroyer-DoS.git](https://github.com/Destroyer-official/Network-Information-Toolkit.git](https://github.com/Destroyer-official/Network-Information-Toolkit.git)
+    ```
+-. **Navigate to the directory:**
+    ```bash
+    cd Network-Information-Toolkit
+    ```
 - Install dependencies:
   ```bash
   pip install -r requirements.txt
@@ -36,8 +45,7 @@ The Network Information Toolkit is a comprehensive Python toolS designed for net
 1. **Run the script:**
    ```bash
    python NetInfo_Toolkit.py
-   ```
-   The script will prompt you to choose an option from the available functionalities.
+
 
 ---
 
