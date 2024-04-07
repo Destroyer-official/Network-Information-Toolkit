@@ -1,3 +1,4 @@
+
 <div align="center">
 
 # 🌐 Network-Information-Toolkit 🌐
@@ -7,15 +8,11 @@
 
 </div>
 
-<div align="center">
-</div>
-
-
 ---
 
 ### 🌟 Overview
 
-The Network Information Toolkit is a comprehensive Python toolS designed for network analysis and troubleshooting. It offers a range of functionalities to gather information about IP addresses, DNS records, SSL certificates, BGP data, and more.
+The Network Information Toolkit is a comprehensive Python tool designed for network analysis and troubleshooting. It offers a range of functionalities to gather information about IP addresses, DNS records, SSL certificates, BGP data, and more.
 
 ---
 
@@ -23,20 +20,22 @@ The Network Information Toolkit is a comprehensive Python toolS designed for net
  
 #### Prerequisites:
 
-- Python  3.12 ([Download Python](https://www.python.org/))
+- Python 3.12 ([Download Python](https://www.python.org/))
   
--. **Clone the repository:**
-    ```bash
-    git clone https://github.com/Destroyer-official/Network-Information-Toolkit.git
-    ```
--. **Navigate to the directory:**
-    ```bash
-    cd Network-Information-Toolkit
-    ```
--. Install dependencies:
-  ```bash
-  pip install -r requirements.txt
-  ```
+#### Clone the repository:
+```bash
+git clone https://github.com/Destroyer-official/Network-Information-Toolkit.git
+```
+#### Navigate to the directory:
+```bash
+cd Network-Information-Toolkit
+```
+
+
+#### Install dependencies:
+```bash
+pip install -r requirements.txt
+```
 
 ---
 
@@ -45,7 +44,7 @@ The Network Information Toolkit is a comprehensive Python toolS designed for net
 1. **Run the script:**
    ```bash
    python NetInfo_Toolkit.py
-
+   ```
 
 ---
 
@@ -103,7 +102,6 @@ The Network Information Toolkit is a comprehensive Python toolS designed for net
   - Retrieves TXT records for a given domain, providing additional information such as SPF, DKIM, and DMARC records.
 - **IP Geolocation 📍:**
   - Determines the approximate geographic location of an IP address, including details such as country, region, city, latitude, longitude, and more.
-    nalyzes a website's SSL/TLS certificate, verifying issuance, validity, and encryption details, ensuring secure communication.
 
 ---
 
@@ -118,16 +116,15 @@ When you run the `NetInfo_Toolkit.py` script, it presents you with a menu of ava
 
 ### 🤝 Contributing
 
-🌟 Contributions, bug reports, and feature requests are welcome! Please follow the guidelines outlined in the [CONTRIBUTING.md](CONTRIBUTING.md) file.
+🤝 Contributions are welcome! For suggestions, enhancements, or issues, feel free to create a pull request or submit an issue in the repository.
 
 ---
 
 ### 📜 License
 
-⚖️ This project is licensed under the MIT License. Refer to the [LICENSE](LICENSE) file for detailed licensing information.
+This project is licensed under the MIT License. Refer to the [LICENSE](LICENSE) file for detailed licensing information.
 
 <div align="center">
 
 ---
-
 </div>
