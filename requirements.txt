@@ -1,0 +1,11 @@
+requests
+ipwhois
+python-whois
+aioipapi
+ipapi
+bs4
+pyvis
+matplotlib
+tldextract
+aiofiles
+aiohttp
