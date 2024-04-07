@@ -3,10 +3,6 @@ import logging
 import json
 
 class BGP:
-    def __init__(self):
-        # Configure logging
-        logging.basicConfig(filename='bgpview.log', level=logging.ERROR)
-
     def save_to_file(self, filename, domain, content):
         """
         Saves content to a file.
@@ -17,7 +13,6 @@ class BGP:
             content (dict): The JSON content to be saved.
         """
         with open(filename, 'w+') as file:
-            file.write(f"Domain: {domain}\n\n")
             # Assuming 'content' is a dictionary containing the data to be saved
             json.dump(content, file, indent=4)
 
