@@ -19,7 +19,7 @@ import http.server
 import socketserver
 
 
-logging.basicConfig(filename='Logs//link_extractor.log', level=logging.ERROR)
+logging.basicConfig(filename='sitemap.log', level=logging.ERROR)
 
 
 class LinkExtractor:
@@ -141,6 +141,8 @@ def sitemap_main():
         file_name = extractor.save_links_to_file()
         extractor.visualize_sitemap()
         extractor.close_session()
+        os.system('cls')
+        os.system('clear')
         print(f"\n\t{len(extractor.all_links)} links found and saved to {file_name}\n")
 
         # Serve the HTML file directly after it's created
