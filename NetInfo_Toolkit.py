@@ -1,17 +1,17 @@
 import os
 import time
-import json
-import asyncio
+import json   
+import asyncio 
 import logging
 from ipwhois import IPWhois
-from imp.ASN_info import BGP
+from imp.ASN_info  import BGP
 from IP_info.sitemap import sitemap_main
 from IP_info.Whois_info import whois_info
 from IP_info.Crawler import crawler_fetcher
 from IP_info.Robot_info import parse_robots_txt
 from IP_info.IP_location import IPGeolocationAPI
 from IP_info.HEADER_info import save_header_info
-from DNS_Records.A_records import ARecordFetcher
+from DNS_Records.A_records import  ARecordFetcher
 from DNS_Records.NS_records import NSRecordFetcher
 from DNS_Records.MX_records import MXRecordFetcher
 from DNS_Records.SOA_records import SOARecordFetcher
@@ -20,30 +20,26 @@ from DNS_Records.SRV_records import SRVRecordFetcher
 from IP_info.SSL_Certificate_Information import ssl_main
 from DNS_Records.CNAME_records import fetch_cname_records
 from DNS_Records.TXT_records import fetch_txt_records_for_domain
-from IP_info.port_scanner import port_scanner_async as port_scanner
-
+from  IP_info.port_scanner import port_scanner_async as port_scanner
 
 def safe_filename(name):
     return name.replace(':', '_')
 
 
 def save_file(content, filename):
-    try:
-        with open(filename, 'w') as file:
-            json.dump(content, file, indent=4)
-    except IOError as e:
-        logging.error(f"Error saving file: {e}")
+    with open(filename, 'w') as file:
+        json.dump(content, file, indent=4)
 
 
-async def IP_info():
+def IP_info():
     IP = input("Enter the IP address: ")
     output_filename = f"{safe_filename(IP)}_IP_info.json"
     try:
         obj = IPWhois(IP)
         # Perform RDAP lookup
-        results_rdap = await asyncio.to_thread(obj.lookup_rdap, depth=3)
+        results_rdap = obj.lookup_rdap(depth=3)
         # Perform WHOIS lookup
-        results_whois = await asyncio.to_thread(obj.lookup_whois)
+        results_whois = obj.lookup_whois()
         # Combine the results of RDAP and WHOIS lookups
         results = {
             "rdap": results_rdap,
@@ -55,10 +51,11 @@ async def IP_info():
         logging.error(f"Unexpected error occurred: {e}")
 
 
-async def all_main():
+
+
+def all_main():
     time.sleep(3)
-    os.system("cls")
-    os.system("clear")
+    os.system("cls" if os.name == "nt" else "clear")
     print("\n\n")
     print("Choose an option:")
     print("1.  Get IP Information")
@@ -88,8 +85,7 @@ async def all_main():
     print("25. Get TXT Records")
     print("26. Get IP Locations")
     choice = input("Enter your choice (1-26): ")
-    os.system("clear")
-    os.system("cls")
+    os.system("cls" if os.name == "nt" else "clear")
     functionalities = {
         '1': "Get IP Information:\nThis option retrieves detailed information about a specific IP address, including its associated Autonomous System Number (ASN), prefix, country, registry, and more. It combines data from RDAP and WHOIS lookups to provide comprehensive insights.",
         '2': "Port Scanner:\nPort Scanner is a powerful tool that probes a server or host to determine if specific network ports are open. Open ports indicate the presence of active services, allowing users to assess the security and accessibility of a system.",
@@ -127,9 +123,9 @@ async def all_main():
 
     # Perform selected action
     if choice == '1':
-        await IP_info()
+        IP_info()
     elif choice == '2':
-        await port_scanner()
+        port_scanner()
     elif choice == '3':
         domain = input("Enter the domain: ")
         whois_info(domain)
@@ -147,6 +143,7 @@ async def all_main():
     elif choice == '8':
         ssl_main()
     elif choice == '9':
+        
         asn_number = input("Enter the ASN number: ")
         BGP().ASN_Prefixes(asn_number)
     elif choice == '10':
@@ -178,6 +175,7 @@ async def all_main():
         A_fetcher = ARecordFetcher()
         domain = input("Enter the domain: ")
         A_fetcher.get_a_records(domain)
+
     elif choice == '19':
         domain = input("Enter the domain: ")
         fetch_cname_records(domain)
@@ -208,11 +206,11 @@ async def all_main():
         api = IPGeolocationAPI()
         ip_address = input("Enter the IP address: ")
         try:
-            await api.get_ip_location(ip_address)
+            asyncio.run(api.get_ip_location(ip_address))
         except Exception as e:
             print(f"An error occurred: {e}")
 
 
 if __name__ == "__main__":
     while True:
-        asyncio.run(all_main())
+        all_main()
