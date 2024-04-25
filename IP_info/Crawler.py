@@ -71,6 +71,7 @@ def extract_headings(soup):
 
 def save_crawler_info(url, internal_links, external_links, images, css_files, js_files, meta_tags, headings):
     filename = url.replace('http://', '').replace('https://', '').replace('/', '_') + "_Crawler.txt"
+    # print(filename)
     with open(filename, 'w') as f:
         f.write(f"URL: {url}\n")
         f.write("Internal Links:\n")
@@ -105,7 +106,7 @@ def crawler_fetcher(url):
         meta_tags = extract_meta_tags(soup)
         headings = extract_headings(soup)
         save_crawler_info(url, internal_links, external_links, images, css_files, js_files, meta_tags, headings)
-        print("Crawler information saved successfully.")
+        print(f"Crawler information saved successfully. ")
 
 if __name__ == "__main__":
     url = input("Enter the URL to crawl: ")
