@@ -7,7 +7,7 @@ from ipwhois import IPWhois
 from imp.ASN_info  import BGP
 from IP_info.sitemap import sitemap_main
 from IP_info.Whois_info import whois_info
-from IP_info.Crawler import crawler_fetcher
+from IP_info.Crawler import main as crawler_fetcher
 from IP_info.Robot_info import parse_robots_txt
 from IP_info.IP_location import IPGeolocationAPI
 from IP_info.HEADER_info import save_header_info
@@ -130,8 +130,7 @@ def all_main():
         domain = input("Enter the domain: ")
         whois_info(domain)
     elif choice == '4':
-        domain = input("Enter the domain: ")
-        crawler_fetcher(domain)
+       asyncio.run(crawler_fetcher())
     elif choice == '5':
         domain = input("Enter the domain: ")
         save_header_info(domain)
